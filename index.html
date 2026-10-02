@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KIDAI — Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a class="brand" href="index.html">KIDAI</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="mykadhar.html">My Kadhaar</a>
+      <a href="about.html">About KIDAI</a>
+      <a href="buildwithus.html">Build with Us</a>
+      <a href="media.html">Media</a>
+      <a href="documents.html">Documents</a>
+      <a href="help.html">Help</a>
+    </div>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">Civic service, redesigned</p>
+      <h1>What do you need help with?</h1>
+      <p>Find services, documents and answers without navigating through complicated menus.</p>
+      <div class="search-box">
+        <input id="homeSearch" type="search" placeholder="I want to update my address">
+        <button onclick="searchDemo('homeSearch')">Search</button>
+      </div>
+      <div id="searchResult" class="search-result" aria-live="polite"></div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <div><p class="eyebrow">Start here</p><h2>Common services</h2></div>
+      </div>
+      <div class="grid">
+        <article class="card"><span class="icon">↓</span><h3>Download Aadhaar</h3><p>Learn how the download process works.</p><a href="mykadhar.html">View service</a></article>
+        <article class="card"><span class="icon">↻</span><h3>Update Aadhaar</h3><p>Explore available update services.</p><a href="mykadhar.html">View service</a></article>
+        <article class="card"><span class="icon">✓</span><h3>Check update status</h3><p>See the status of a demo request.</p><a href="mykadhar.html#status">Check status</a></article>
+        <article class="card"><span class="icon">⌖</span><h3>Find Aadhaar centre</h3><p>Explore centre-finding information.</p><a href="help.html">Find a centre</a></article>
+        <article class="card"><span class="icon">⌁</span><h3>Lock / Unlock biometrics</h3><p>Learn about biometric-related services.</p><a href="mykadhar.html">Learn more</a></article>
+        <article class="card"><span class="icon">▣</span><h3>Order PVC card</h3><p>Understand the conceptual service flow.</p><a href="mykadhar.html">View service</a></article>
+      </div>
+    </section>
+
+    <section class="section soft">
+      <p class="eyebrow">Guided help</p>
+      <h2>Not sure what you need?</h2>
+      <div class="goal-list">
+        <a href="mykadhar.html">I need to update something →</a>
+        <a href="documents.html">I need a document →</a>
+        <a href="help.html">I need to find a centre →</a>
+        <a href="mykadhar.html#status">I submitted a request →</a>
+        <a href="help.html">I have a question →</a>
+      </div>
+    </section>
+
+    <section class="section" id="status">
+      <div class="status-panel">
+        <div><p class="eyebrow">Request tracking</p><h2>Already submitted a request?</h2><p>Try the demo status flow using the reference number below.</p></div>
+        <div class="status-form">
+          <label for="ref">Demo reference number</label>
+          <input id="ref" value="DEMO-2026-48291">
+          <button onclick="checkStatus()">Check status</button>
+          <p id="statusResult" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="eyebrow">Updates</p><h2>Important updates</h2>
+      <div class="news-row">
+        <article class="mini-card"><span>Announcement · 02 Oct 2026</span><h3>Service information refresh</h3><p>Explore the redesigned service discovery experience.</p></article>
+        <article class="mini-card"><span>Accessibility · 28 Sep 2026</span><h3>Accessibility improvements</h3><p>Keyboard, readable type and clearer focus states are built into the prototype.</p></article>
+        <article class="mini-card"><span>Prototype · 25 Sep 2026</span><h3>KIDAI demo experience</h3><p>This project uses mock data and does not process real identity information.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>KIDAI</strong>
+    <p>KIDAI is a conceptual UI/UX prototype created for an academic/hackathon project. It is not affiliated with or endorsed by UIDAI or the Government of India. No real identity data is collected or processed.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
